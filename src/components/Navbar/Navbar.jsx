@@ -12,9 +12,8 @@ function Navbar() {
         <nav className="app__navbar">
             <div className="app__navbar-logo">
                 <img src={images.logo} alt="logo" />
-            </div>
-            <div className="app__navbar-logoo">
-                <img src={images.logoo} alt="logoo" />
+
+                <div className="head-text" >Rooma Rizwan</div>
             </div>
             <ul className="app__navbar-links">
                 {['home', 'about', 'work', 'skills', 'testimonial', 'contact'].map((item) => (

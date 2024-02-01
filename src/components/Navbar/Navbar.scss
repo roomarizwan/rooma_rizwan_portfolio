@@ -28,16 +28,16 @@
             height: 40px;
         }
     }
-}
 
-.app__navbar-logoo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    img {
-        width: 200px;
-        height: 20px;
+    div {
+        width: 250px;
+        height: 40px;
+        margin: 0 0.5rem;
+        text-align: left;
+        font-size: 2.2rem;
+        font-family: "red hat display";
+        padding-left: 0.2rem;
+        color: var(--sea-green-color);
 
         @media screen and (min-width :2000px) {
             width: 180px;
@@ -70,8 +70,7 @@
         }
 
         a {
-          //  color: var(--gray-color);
-            color: var(--secondary-color);
+            color: var(--sea-green-color);
             text-decoration: none;
             flex-direction: column;
 
@@ -81,7 +80,6 @@
             transition: all 0.03s ease-in-out;
 
             &:hover {
-                //color: var(--secondary-color);
                 color: var(--gray-color);
             }
         }
@@ -89,7 +87,6 @@
 
         &:hover {
             div {
-              //  background: var(--secondary-color);
                 background: var(--gray-color);
             }
 
@@ -109,7 +106,7 @@
 
     border-style: groove;
     border-width: 7px;
-    border-color: var(--secondary-color);
+    border-color:   var(--sea-green-color);
 
     display: flex;
     justify-content: center;
@@ -119,7 +116,7 @@
     svg {
         width: 70%;
         height: 70%;
-        color: var(--secondary-color);
+        color:     var(--sea-green-color);
     }
 
     div {
@@ -149,13 +146,13 @@
         svg {
             width: 45px;
             height: 45px;
-            color: var(--secondary-color);
+            color:  var(--sea-green-color);
             margin: 0.5rem 1rem;
 
             border-radius: 15px;
             border-style: groove;
             border-width: 7px;
-            border-color: var(--secondary-color);
+            border-color:  var(--sea-green-color);
         }
 
         ul {
@@ -174,8 +171,7 @@
                 margin: 1rem;
 
                 a {
-                   // color: var(--gray-color);
-                    color: var(--secondary-color);
+                    color:   var(--sea-green-color);
                     text-decoration: none;
                     font-size: 1rem;
                     text-transform: uppercase;
@@ -184,7 +180,6 @@
                     transition: all 0.03s ease-in-out;
 
                     &:hover {
-                      //  color: var(--secondary-color);
                         color: var(--gray-color);
                     }
                 }
