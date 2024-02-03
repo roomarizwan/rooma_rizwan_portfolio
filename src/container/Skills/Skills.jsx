@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import {Tooltip as ReactTooltip} from 'react-tooltip';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -25,7 +25,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text" >Skills & Experiences</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -58,13 +58,13 @@ const Skills = () => {
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
-                      <ReactTooltip
+                    <ReactTooltip
                       id={work.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
-          
+
                     </ReactTooltip>
                     <motion.div
                       whileInView={{ opacity: [0, 1] }}
@@ -79,10 +79,10 @@ const Skills = () => {
                         data-tooltip-content={work.desc}
                       >
                         {work.name}
-                        </h4>
+                      </h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
-          
+
                   </>
                 ))}
               </motion.div>
@@ -97,5 +97,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',
-  'app__whitebg',
+  'app__whitebg'
 );

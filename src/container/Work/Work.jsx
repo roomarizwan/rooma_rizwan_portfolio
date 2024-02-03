@@ -41,7 +41,7 @@ const Work = () => {
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
       <div className="app__work-filter">
-        {[ 'Web App', 'Desktop App', 'Angular JS','React JS', 'All'].map((item, index) => (
+        {['Web App', 'Desktop App', 'Angular JS', 'React JS', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -95,7 +95,7 @@ const Work = () => {
 
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10}}
+              <p className="p-text" style={{ marginTop: 10 ,textAlign:'justify'}}
               >{work.description}</p>
 
               <div className="app__work-tag app__flex">
@@ -112,5 +112,5 @@ const Work = () => {
 export default AppWrap(
   MotionWrap(Work, 'app__works'),
   'work',
-  'app__primarybg',
+  'app__primarybg'
 );

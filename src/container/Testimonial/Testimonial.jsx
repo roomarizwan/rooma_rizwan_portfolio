@@ -30,6 +30,9 @@ const Testimonial = () => {
 
   return (
     <>
+
+      <h2 className="head-text" >Things People Say</h2>
+
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
@@ -58,7 +61,8 @@ const Testimonial = () => {
       <div className="app__testimonial-brands app__flex">
         {brands.map((brand) => (
           <motion.div
-            whileInView={{ opacity: [0, 1] }}
+            whileInView={{ opacity: 1 }}
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: 'tween' }}
             key={brand._id}
           >
@@ -73,5 +77,5 @@ const Testimonial = () => {
 export default AppWrap(
   MotionWrap(Testimonial, 'app__testimonial'),
   'testimonial',
-  'app__primarybg',
+  'app__primarybg'
 );
