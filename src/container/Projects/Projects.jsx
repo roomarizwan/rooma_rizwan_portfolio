@@ -40,6 +40,6 @@ const Projects = () => {
 
 export default AppWrap(
     MotionWrap(Projects, 'app__projects'),
-    'project',
+    'projects',
     'app__whitebg'
 );
