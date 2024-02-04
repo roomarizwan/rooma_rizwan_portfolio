@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Testimonial.scss';
+import './../../App.scss';
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,8 +42,18 @@ const Testimonial = () => {
             <div className="app__testimonial-content">
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
               <div>
+                <ReactTooltip
+                  id={testimonials[currentIndex].name}
+                  effect="solid"
+                  arrowColor="#fff"
+                  className="app__tooltip"
+                />
                 <a href={`${testimonials[currentIndex].linkedinAddress}`} target="_blank">
-                  <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
+                  <h4 className="bold-text"
+                    data-tooltip-id={testimonials[currentIndex].name}
+                    data-tooltip-content={`Clicking will direct you to ${testimonials[currentIndex].name}'s LinkedIn profile`}>
+                    {testimonials[currentIndex].name}
+                  </h4>
                 </a>
                 <h5 className="p-text">{testimonials[currentIndex].company}</h5>
               </div>

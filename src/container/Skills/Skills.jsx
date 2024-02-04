@@ -5,6 +5,7 @@ import { Tooltip as ReactTooltip } from 'react-tooltip';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
+import './../../App.scss';
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
@@ -62,7 +63,7 @@ const Skills = () => {
                       id={work.name}
                       effect="solid"
                       arrowColor="#fff"
-                      className="skills-tooltip"
+                      className="app__tooltip"
                     >
 
                     </ReactTooltip>
